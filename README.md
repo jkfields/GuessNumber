@@ -14,4 +14,5 @@ Take a guess (1 of 4). 5
 Your guess is too high.
 
 Take a guess (2 of 4). 3
+
 Excellent, Jeff! You guessed the number in 2 guesses!
