@@ -13,7 +13,7 @@ class GuessNumber:
                  "high" : "Your guess is too high.",
                  "low" : "Your guess is too low.",
                  "name" : "Hello! What is your name? ",
-                 "wrong" : "\nNope. The number I was thinking of was {0}.",
+                 "wrong" : "\nUh oh. The number I was thinking of was {0}.",
                  "error" : "*** Guess a number between {0} and {1}! ***"
                }
 
