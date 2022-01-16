@@ -9,7 +9,7 @@ class GuessNumber:
 
     messages = { "play" : "{0}, let's play a game. I'm thinking of a number between {1} and {2}.",
                  "guess" : "\nTake a guess ({0} of {1}). ",
-                 "correct" : "Good job, {0}! You guessed my number in {1} guesses!",
+                 "correct" : "Excellent, {0}! You guessed the number in {1} guesses!",
                  "high" : "Your guess is too high.",
                  "low" : "Your guess is too low.",
                  "name" : "Hello! What is your name? ",
