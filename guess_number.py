@@ -7,7 +7,7 @@ class GuessNumber:
     play_game = True
     guess_count = 0
 
-    messages = { "play" : "{0}, let's play a game. I'm thinking of a number between {1:n} and {2:n}.",
+    messages = { "play" : "{0}, let's play a game. I'm thinking of a number between {1:d} and {2:d}.",
                  "guess" : "\nTake a guess ({0:d} of {1:d}). ",
                  "correct" : "Excellent, {0}! You guessed the number in {1:d} guesses!",
                  "high" : "Your guess is too high ({0:d}).",
