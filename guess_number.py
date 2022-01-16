@@ -3,11 +3,6 @@
 import random
 import sys
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print("Hi, {0}".format(name))  # Press ⌘F8 to toggle the breakpoint.
-
-
 class GuessNumber:
     play_game = True
     guess_count = 0
