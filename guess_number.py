@@ -73,8 +73,6 @@ class GuessNumber:
 
 
 def main(args=None):
-    #sys.stdout.write('Hello! What is your name? '),
-    #name = sys.stdin.readline().strip()
     game = GuessNumber(1, 20, 4)
     game.play()
 
