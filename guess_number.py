@@ -3,17 +3,22 @@
 import random
 import sys
 
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print("Hi, {0}".format(name))  # Press ⌘F8 to toggle the breakpoint.
+
+
 class GuessNumber:
     play_game = True
     guess_count = 0
 
-    messages = { "play" : "{0}, let's play a game. I'm thinking of a number between {1:d} and {2:d}.",
+    messages = { "play" : "{0}, let's play a game. I'm thinking of a number between {1:n} and {2:n}.",
                  "guess" : "\nTake a guess ({0:d} of {1:d}). ",
                  "correct" : "Excellent, {0}! You guessed the number in {1:d} guesses!",
-                 "high" : "Your guess is too high.",
-                 "low" : "Your guess is too low.",
+                 "high" : "Your guess is too high ({0:d}).",
+                 "low" : "Your guess is too low ({0:d}).",
                  "name" : "Hello! What is your name? ",
-                 "wrong" : "\nUh oh. The number I had in mind is {0:d}.",
+                 "wrong" : "\nUh oh. The number I had in mind is {0}:d.",
                  "error" : "*** Guess a number between {0:d} and {1:d}! ***"
                }
 
@@ -39,26 +44,39 @@ class GuessNumber:
                                                     self.guesses_allowed)
             _guess = self.get_user_input(msg)
 
-            if _guess.isdigit():
+            if self.is_number(_guess):
                 self.guess = int(_guess)
 
                 if self.guess_count == self.guesses_allowed or self.guess == self.number:
                     self.play_game = False
 
                 if self.guess < self.number:
-                    print(self.messages.get('low'))
+                    print(self.messages.get('low').format(self.get_diff()))
 
                 if self.guess > self.number:
-                    print(self.messages.get('high'))
+                    print(self.messages.get('high').format(self.get_diff()))
 
             else:
                 print(self.messages.get('error').format(self.min_number,
                                                         self.max_number))
-        if self.guess == self.number:
+        if self.matched():
             print(self.messages.get('correct').format(self.name,
                                                       self.guess_count))
         else:
             print(self.messages.get('wrong').format(self.number))
+
+
+    def get_diff(self):
+        return abs(self.guess - self.number)
+
+
+    def matched(self):
+        return self.guess == self.number
+
+    
+    @staticmethod
+    def is_number(num):
+        return num.isdigit()
 
 
     @staticmethod
