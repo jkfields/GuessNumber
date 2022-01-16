@@ -7,14 +7,14 @@ class GuessNumber:
     play_game = True
     guess_count = 0
 
-    messages = { "play" : "{0}, let's play a game. I'm thinking of a number between {1} and {2}.",
-                 "guess" : "\nTake a guess ({0} of {1}). ",
-                 "correct" : "Excellent, {0}! You guessed the number in {1} guesses!",
+    messages = { "play" : "{0}, let's play a game. I'm thinking of a number between {1:d} and {2:d}.",
+                 "guess" : "\nTake a guess ({0:d} of {1:d}). ",
+                 "correct" : "Excellent, {0}! You guessed the number in {1:d} guesses!",
                  "high" : "Your guess is too high.",
                  "low" : "Your guess is too low.",
                  "name" : "Hello! What is your name? ",
-                 "wrong" : "\nUh oh. The number I had in mind is {0}.",
-                 "error" : "*** Guess a number between {0} and {1}! ***"
+                 "wrong" : "\nUh oh. The number I had in mind is {0:d}.",
+                 "error" : "*** Guess a number between {0:d} and {1:d}! ***"
                }
 
     def __init__(self, min=1, max=10, allowed=5):
