@@ -7,7 +7,6 @@ This should run in either Python 2 or 3.
 Output:
 
 Hello! What is your name? Jeff
-
 Jeff, let's play a game. I'm thinking of a number between 1 and 20.
 
 Take a guess (1 of 4). 5
